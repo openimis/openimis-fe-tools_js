@@ -108,5 +108,11 @@
   "tools.RegistersPage.insureesBlockTitle": "Insurees",
   "tools.RegistersPage.insurees.uploadLabel": "Upload Insurees",
   "tools.RegistersPage.insurees.downloadLabel": "Download Insurees",
-  "tools.ReportSearcher.moduleName": "{module} Module"
+  "tools.ReportSearcher.moduleName": "{module} Module",
+  "tools.registers_perms": "Tools | Registers",
+  "tools.registers_diagnoses_perms": "Tools | Diagnoses",
+  "tools.registers_health_facilities_perms": "Tools | Health Facilities",
+  "tools.registers_locations_perms": "Tools | Locations",
+  "tools.registers_items_perms": "Tools | Items",
+  "tools.registers_services_perms": "Tools | Services"
 }
