@@ -27,14 +27,16 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
-    "vite": "^4.0.0",
-    "prop-types": "^15.7.2",
     "clsx": "^1.1.1",
     "moment": "^2.25.3",
-    "react-autosuggest": "^10.0.2"
+    "prop-types": "^15.7.2",
+    "react-autosuggest": "^10.0.2",
+    "vite": "^4.0.0"
   },
   "files": [
     "dist"
   ],
-  "dependencies": {}
+  "dependencies": {
+   
+  }
 }

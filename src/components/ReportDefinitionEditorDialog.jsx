@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { Button, Dialog, DialogActions, DialogContent, DialogTitle, CircularProgress } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Button, Dialog, DialogActions, DialogContent, DialogTitle, CircularProgress } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useTranslations, useModulesManager } from "@openimis/fe-core";
 import ReportBro from "./ReportBro";
 import { useOverrideReportMutation, useReportQuery } from "../hooks";

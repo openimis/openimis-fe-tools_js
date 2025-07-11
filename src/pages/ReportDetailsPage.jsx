@@ -1,4 +1,4 @@
-// import { makeStyles } from "@material-ui/styles";
+// import { makeStyles } from "@mui/styles";
 // import { historyPush, useModulesManager, toISODate, withHistory } from "@openimis/fe-core";
 // import clsx from "clsx";
 // import React, { useEffect, useState } from "react";

@@ -1,9 +1,9 @@
 import React, { useCallback, useState } from "react";
 import { useSelector } from "react-redux";
 
-import { Box, Button, Tooltip } from "@material-ui/core";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import EditIcon from '@material-ui/icons/Edit';
+import { Box, Button, Tooltip } from "@mui/material";
+import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
+import EditIcon from '@mui/icons-material/Edit';
 
 import {
   Searcher,

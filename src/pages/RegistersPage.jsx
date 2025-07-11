@@ -14,7 +14,7 @@ import {
   DialogContent,
   DialogTitle,
   DialogActions
-} from "@material-ui/core";
+} from "@mui/material";
 
 import {
   useTranslations,

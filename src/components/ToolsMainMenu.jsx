@@ -1,4 +1,4 @@
-import {Ballot, ImportExport, SaveAlt, Settings} from "@material-ui/icons";
+import {Ballot, ImportExport, SaveAlt, Settings} from "@mui/icons-material";
 import { formatMessage, MainMenuContribution, withModulesManager } from "@openimis/fe-core";
 import React, { Component } from "react";
 import { injectIntl } from "react-intl";

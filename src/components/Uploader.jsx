@@ -12,7 +12,7 @@ import {
   Dialog,
   DialogTitle,
   DialogActions,
-} from "@material-ui/core";
+} from "@mui/material";
 
 import Block from "../components/Block";
 
