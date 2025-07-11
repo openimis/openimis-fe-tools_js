@@ -1,4 +1,4 @@
-import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@material-ui/core";
+import { Box, Button, Dialog, DialogActions, DialogContent, DialogTitle } from "@mui/material";
 import { ErrorBoundary, SelectInput, useBoolean, useModulesManager, useTranslations } from "@openimis/fe-core";
 import React, { useEffect, useState } from "react";
 import { useReportQuery } from "../hooks";
