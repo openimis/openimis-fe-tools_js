@@ -1,6 +1,6 @@
 import React from "react";
 import { FormattedMessage } from '@openimis/fe-core';
-import {Ballot, ImportExport, SaveAlt} from "@material-ui/icons";
+import { Ballot, ImportExport, SaveAlt } from '@mui/icons-material';
 import ToolsMainMenu from "./components/ToolsMainMenu";
 import RegistersPage from "./pages/RegistersPage";
 import { PolicyRenewalsPage } from "./pages/PolicyRenewalsPage";
