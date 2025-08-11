@@ -1,54 +1,57 @@
-// import { makeStyles } from "@mui/styles";
-// import { historyPush, useModulesManager, toISODate, withHistory } from "@openimis/fe-core";
-// import clsx from "clsx";
-// import React, { useEffect, useState } from "react";
-// import moment from "moment";
-// import ReportForm from "../components/ReportForm";
-// import { useOverrideReportMutation, useReportQuery } from "../hooks";
+import { styled } from "@mui/material/styles";
+import { historyPush, useModulesManager, toISODate, withHistory } from "@openimis/fe-core";
+import clsx from "clsx";
+import React, { useEffect, useState } from "react";
+import moment from "moment";
+import ReportForm from "../components/ReportForm";
+import { useOverrideReportMutation, useReportQuery } from "../hooks";
 
-// const useStyles = makeStyles((theme) => ({
-//   page: theme.page,
-//   fab: theme.fab,
-// }));
+const StyledPage = styled('div')(({ theme }) => ({
+  ...theme.page,
+}));
 
-// const ReportDetailsPage = (props) => {
-//   const { match, history } = props;
-//   const modulesManager = useModulesManager();
-//   const { report, isLoading } = useReportQuery({ name: match.params.name }, { skip: !match.params.name });
+const StyledFab = styled('div')(({ theme }) => ({
+  ...theme.fab,
+}));
 
-//   const [values, setValues] = useState();
-//   const classes = useStyles();
+const ReportDetailsPage = (props) => {
+  const { match, history } = props;
+  const modulesManager = useModulesManager();
+  const { report, isLoading } = useReportQuery({ name: match.params.name }, { skip: !match.params.name });
 
-//   useEffect(() => {
-//     setValues(report);
-//   }, [report]);
+  const [values, setValues] = useState();
+  const classes = useStyles();
 
-//   const onSave = () => {
-//     if (values) {
-//       mutate({
-//         name: values.name,
-//         validityFrom: values.validityFrom ? moment(values.validityFrom).format() : null,
-//         definition: values.definition,
-//       });
-//     }
-//   };
+  useEffect(() => {
+    setValues(report);
+  }, [report]);
 
-//   const onChange = (newReport) => {
-//     setValues(newReport);
-//   };
+  const onSave = () => {
+    if (values) {
+      mutate({
+        name: values.name,
+        validityFrom: values.validityFrom ? moment(values.validityFrom).format() : null,
+        definition: values.definition,
+      });
+    }
+  };
 
-//   return (
-//     <div className={clsx(classes.page)}>
-//       {!isLoading && (
-//         <ReportForm
-//           onChange={onChange}
-//           report={values}
-//           onBack={() => historyPush(modulesManager, history, "tools.reports")}
-//           onSave={onSave}
-//         />
-//       )}
-//     </div>
-//   );
-// };
+  const onChange = (newReport) => {
+    setValues(newReport);
+  };
 
-// export default withHistory(ReportDetailsPage);
+  return (
+    <StyledPage>
+      {!isLoading && (
+        <ReportForm
+          onChange={onChange}
+          report={values}
+          onBack={() => historyPush(modulesManager, history, "tools.reports")}
+          onSave={onSave}
+        />
+      )}
+    </StyledPage>
+  );
+};
+
+export default withHistory(ReportDetailsPage);

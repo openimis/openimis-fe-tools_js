@@ -1,33 +1,31 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/material/styles";
 import clsx from "clsx";
 import { Paper, Box, Typography } from "@mui/material";
 
-const useBlockStyles = makeStyles((theme) => ({
-  block: {
-    ...theme.paper.paper,
-    margin: 0,
-  },
-  header: {
-    ...theme.paper.header,
-    ...theme.paper.title,
-  },
+const StyledPaper = styled(Paper)(({ theme }) => ({
+  ...theme.paper.paper,
+  margin: 0,
+}));
+
+const StyledHeader = styled(Box)(({ theme }) => ({
+  ...theme.paper.header,
+  ...theme.paper.title,
 }));
 
 const Block = (props) => {
   const { title, className, children } = props;
-  const classes = useBlockStyles();
   return (
-    <Paper className={clsx(classes.block, className)}>
+    <StyledPaper className={className}>
       {title && (
-        <Box className={classes.header}>
+        <StyledHeader>
           <Typography>{title}</Typography>
-        </Box>
+        </StyledHeader>
       )}
       <Box overflow="auto">
         <Box m="10px">{children}</Box>
       </Box>
-    </Paper>
+    </StyledPaper>
   );
 };
 
