@@ -27,6 +27,7 @@
     "@babel/preset-env": "^7.9.6",
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
+    "@vitejs/plugin-react": "^5.0.2",
     "clsx": "^1.1.1",
     "moment": "^2.25.3",
     "prop-types": "^15.7.2",
