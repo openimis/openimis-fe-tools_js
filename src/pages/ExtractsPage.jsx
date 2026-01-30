@@ -33,7 +33,7 @@ const OfficerDownloadBlock = (props) => {
   return (
     <Block title={formatMessage("OfficerDownloadBlock.title")}>
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <PublishedComponent
             pubRef="admin.EnrolmentOfficerPicker"
             module="admin"
@@ -42,13 +42,13 @@ const OfficerDownloadBlock = (props) => {
             onChange={setOfficer}
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={6}>
           <Button disabled={!officer} color="primary" variant="contained"
                   onClick={onExtractDownload("feedbacks", {officer_id})}>
             {formatMessage("OfficerDownloadBlock.downloadFeedbacksBtn")}
           </Button>
         </Grid>
-        <Grid item xs={6} align="right">
+        <Grid size={6} align="right">
           <Button disabled={!officer} color="primary" variant="contained"
                   onClick={onExtractDownload("renewals", {officer_id})}>
             {formatMessage("OfficerDownloadBlock.downloadRenewalsBtn")}
@@ -121,7 +121,7 @@ const ClaimsUploadBlock = (props) => {
         </ResultDialog>
       )}
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Input
             onChange={(event) => setFiles(event.target.files)}
             required
@@ -132,7 +132,7 @@ const ClaimsUploadBlock = (props) => {
             type="file"
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={6}>
           <Button disabled={!files || request?.isLoading} variant="contained" onClick={onSubmit}>
             <Keyboard />{formatMessage("ClaimsUploadBlock.uploadBtn")}
           </Button>
@@ -187,7 +187,7 @@ const EnrollmentsUploadBlock = (props) => {
         </ResultDialog>
       )}
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Input
             onChange={(event) => setFiles(event.target.files)}
             required
@@ -198,7 +198,7 @@ const EnrollmentsUploadBlock = (props) => {
             type="file"
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={6}>
           <Button disabled={!files || request?.isLoading} variant="contained" onClick={onSubmit}>
             <People />{formatMessage("EnrollmentsUploadBlock.uploadBtn")}
           </Button>
@@ -253,7 +253,7 @@ const RenewalsUploadBlock = (props) => {
         </ResultDialog>
       )}
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Input
             onChange={(event) => setFiles(event.target.files)}
             required
@@ -264,7 +264,7 @@ const RenewalsUploadBlock = (props) => {
             type="file"
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={6}>
           <Button disabled={!files || request?.isLoading} variant="contained" onClick={onSubmit}>
             <RenewIcon />{formatMessage("RenewalsUploadBlock.uploadBtn")}
           </Button>
@@ -319,7 +319,7 @@ const FeedbacksUploadBlock = (props) => {
         </ResultDialog>
       )}
       <Grid container spacing={2}>
-        <Grid item xs={12}>
+        <Grid size={12}>
           <Input
             onChange={(event) => setFiles(event.target.files)}
             required
@@ -330,7 +330,7 @@ const FeedbacksUploadBlock = (props) => {
             type="file"
           />
         </Grid>
-        <Grid item xs={6}>
+        <Grid size={6}>
           <Button disabled={!files || request?.isLoading} variant="contained" onClick={onSubmit}>
             <FeedbackIcon />{formatMessage("FeedbacksUploadBlock.uploadBtn")}
           </Button>
@@ -355,28 +355,28 @@ const ExtractsPage = (props) => {
 
   return (
     <>
-      <Box fullWidth m={2}>
+      <Box m={2}>
         <Grid container spacing={2}>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <Block title={formatMessage("DownloadMasterData.title")}>
               <Grid container alignItems="center" justifyContent="center">
                 <Button variant="contained" color="primary" onClick={onExtractDownload("master_data")}>{formatMessage("DownloadMasterData.downloadBtn")}</Button>
               </Grid>
             </Block>
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <OfficerDownloadBlock />
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <ClaimsUploadBlock />
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <EnrollmentsUploadBlock />
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <FeedbacksUploadBlock />
           </Grid>
-          <Grid item xs={4}>
+          <Grid size={4}>
             <RenewalsUploadBlock />
           </Grid>
         </Grid>

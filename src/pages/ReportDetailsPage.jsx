@@ -54,4 +54,5 @@ const ReportDetailsPage = (props) => {
   );
 };
 
+export { StyledPage };
 export default withHistory(ReportDetailsPage);

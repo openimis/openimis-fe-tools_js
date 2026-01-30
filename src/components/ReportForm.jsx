@@ -10,7 +10,7 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
 const MainPanel = ({ edited, onEditedChanged }) => {
   return (
     <Grid container>
-      <StyledGridItem item xs={4}>
+      <StyledGridItem size={4}>
         <PublishedComponent
           pubRef="tools.ReportDefinitionEditor"
           value={edited.definition}

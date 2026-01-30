@@ -309,10 +309,10 @@ const RegistersPage = () => {
       <Box fullWidth m={2}>
         <Grid container spacing={2}>
           {hasRights(RIGHT_REGISTERS_DIAGNOSES) && (
-            <Grid item xs={4}>
+            <Grid size={4}>
               <Block title={formatMessage("diagnosesBlockTitle")}>
                 <Grid container spacing={2} direction="column">
-                  <Grid item>
+                  <Grid>
                     <Button
                       variant="contained"
                       color="primary"
@@ -321,18 +321,18 @@ const RegistersPage = () => {
                       {formatMessage("downloadBtn")}
                     </Button>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Divider fullWidth />
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("diagnoses.uploadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
-                        <Grid item>
+                        <Grid>
                           <Input
                             onChange={(event) =>
                               handleFieldChange(
@@ -349,7 +349,7 @@ const RegistersPage = () => {
                             type="file"
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <ConstantBasedPicker
                             module="tools"
                             label="strategyPicker"
@@ -361,7 +361,7 @@ const RegistersPage = () => {
                             withNull={false}
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <FormControlLabel
                             label={formatMessage("dryRunLabel")}
                             control={
@@ -378,7 +378,7 @@ const RegistersPage = () => {
                             }
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"
@@ -436,10 +436,10 @@ const RegistersPage = () => {
             </Grid>
           )}
           {hasRights(RIGHT_REGISTERS_LOCATIONS) && (
-            <Grid item xs={4}>
+            <Grid size={4}>
               <Block title={formatMessage("locationsBlockTitle")}>
                 <Grid container spacing={2} direction="column">
-                  <Grid item>
+                  <Grid>
                     <Button
                       variant="contained"
                       color="primary"
@@ -451,18 +451,18 @@ const RegistersPage = () => {
                       {formatMessage("downloadBtn")}
                     </Button>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Divider fullWidth />
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("locations.uploadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
-                        <Grid item>
+                        <Grid>
                           <Input
                             onChange={(event) =>
                               handleFieldChange(
@@ -479,7 +479,7 @@ const RegistersPage = () => {
                             type="file"
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <ConstantBasedPicker
                             module="tools"
                             label="strategyPicker"
@@ -495,7 +495,7 @@ const RegistersPage = () => {
                             withNull={false}
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <FormControlLabel
                             label={formatMessage("dryRunLabel")}
                             control={
@@ -512,7 +512,7 @@ const RegistersPage = () => {
                             }
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                         <Button
                             variant="contained"
                             color="primary"
@@ -570,10 +570,10 @@ const RegistersPage = () => {
             </Grid>
           )}
           {hasRights(RIGHT_REGISTERS_HEALTH_FACILITIES) && (
-            <Grid item xs={4}>
+            <Grid size={4}>
               <Block title={formatMessage("healthFacilitiesBlockTitle")}>
                 <Grid container spacing={2} direction="column">
-                  <Grid item>
+                  <Grid>
                     <Button
                       variant="contained"
                       color="primary"
@@ -585,18 +585,18 @@ const RegistersPage = () => {
                       {formatMessage("downloadBtn")}
                     </Button>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Divider fullWidth />
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("healthFacilities.uploadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
-                        <Grid item>
+                        <Grid>
                           <Input
                             onChange={(event) =>
                               handleFieldChange(
@@ -613,7 +613,7 @@ const RegistersPage = () => {
                             type="file"
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <ConstantBasedPicker
                             module="tools"
                             label="strategyPicker"
@@ -629,7 +629,7 @@ const RegistersPage = () => {
                             withNull={false}
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <FormControlLabel
                             label={formatMessage("dryRunLabel")}
                             control={
@@ -646,7 +646,7 @@ const RegistersPage = () => {
                             }
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"
@@ -727,15 +727,15 @@ const RegistersPage = () => {
             />
           )}
           {hasRights(RIGHT_REGISTERS_ITEMS) && (
-            <Grid item xs={4}>
+            <Grid size={4}>
               <Block title={formatMessage("itemsBlockTitle")}>
                 <Grid container spacing={2} direction="column">
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("items.downloadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
                         <ConstantBasedPicker
@@ -748,7 +748,7 @@ const RegistersPage = () => {
                           constants={EXPORT_TYPES}
                           withNull={false}
                         />
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"
@@ -764,18 +764,18 @@ const RegistersPage = () => {
                       </Grid>
                     </form>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Divider fullWidth />
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("items.uploadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
-                        <Grid item>
+                        <Grid>
                           <Input
                             onChange={(event) =>
                               handleFieldChange(
@@ -794,7 +794,7 @@ const RegistersPage = () => {
                           />
                         </Grid>
                         {/* The strategy picker + the dry run box are useless when uploading all formats other than XML. The code should be refactored to display them/take them into account only if the provided file is an XML file. */}
-                        <Grid item>
+                        <Grid>
                           <ConstantBasedPicker
                             module="tools"
                             label="strategyPicker"
@@ -806,7 +806,7 @@ const RegistersPage = () => {
                             withNull={false}
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <FormControlLabel
                             label={formatMessage("dryRunLabel")}
                             control={
@@ -823,7 +823,7 @@ const RegistersPage = () => {
                             }
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"
@@ -877,15 +877,15 @@ const RegistersPage = () => {
             </Grid>
           )}
           {hasRights(RIGHT_REGISTERS_SERVICES) && (
-            <Grid item xs={4}>
+            <Grid size={4}>
               <Block title={formatMessage("servicesBlockTitle")}>
                 <Grid container spacing={2} direction="column">
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("services.downloadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
                         <ConstantBasedPicker
@@ -898,7 +898,7 @@ const RegistersPage = () => {
                           constants={EXPORT_TYPES}
                           withNull={false}
                         />
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"
@@ -914,18 +914,18 @@ const RegistersPage = () => {
                       </Grid>
                     </form>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Divider fullWidth />
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <Typography variant="h6">
                       {formatMessage("services.uploadLabel")}
                     </Typography>
                   </Grid>
-                  <Grid item>
+                  <Grid>
                     <form noValidate>
                       <Grid container spacing={1} direction="column">
-                        <Grid item>
+                        <Grid>
                           <Input
                             onChange={(event) =>
                               handleFieldChange(
@@ -944,7 +944,7 @@ const RegistersPage = () => {
                           />
                         </Grid>
                         {/* The strategy picker + the dry run box are useless when uploading all formats other than XML. The code should be refactored to display them/take them into account only if the provided file is an XML file. */}
-                        <Grid item>
+                        <Grid>
                           <ConstantBasedPicker
                             module="tools"
                             label="strategyPicker"
@@ -960,7 +960,7 @@ const RegistersPage = () => {
                             withNull={false}
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <FormControlLabel
                             label={formatMessage("dryRunLabel")}
                             control={
@@ -977,7 +977,7 @@ const RegistersPage = () => {
                             }
                           />
                         </Grid>
-                        <Grid item>
+                        <Grid>
                           <Button
                             variant="contained"
                             color="primary"

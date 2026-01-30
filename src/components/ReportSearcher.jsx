@@ -66,7 +66,7 @@ const ReportSearcher = () => {
 
   const formatActions = (report) =>
     !report.category && (
-      <Box display="flex" justifyContent={"flex-end"} gridGap={12}>
+      <Box display="flex" justifyContent={"flex-end"} gap={12}>
         <div
           style={{
             display: "flex",

@@ -35,13 +35,13 @@ const Uploader = ({
   uploadPopupMessage,
 }) => (
   <>
-    <Grid item xs={4}>
+    <Grid size={4}>
       <Block title={formatMessage(blockTitle)}>
         <Grid container spacing={2} direction="column">
-          <Grid item>
+          <Grid>
             <Typography variant="h6">{formatMessage(downloadLabel)}</Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <form noValidate>
               <Grid container spacing={1} direction="column">
                 <ConstantBasedPicker
@@ -54,7 +54,7 @@ const Uploader = ({
                   constants={acceptableFormats}
                   withNull={false}
                 />
-                <Grid item>
+                <Grid>
                   <Button
                     variant="contained"
                     color="primary"
@@ -70,16 +70,16 @@ const Uploader = ({
               </Grid>
             </form>
           </Grid>
-          <Grid item>
+          <Grid>
             <Divider fullWidth />
           </Grid>
-          <Grid item>
+          <Grid>
             <Typography variant="h6">{formatMessage(uploadLabel)}</Typography>
           </Grid>
-          <Grid item>
+          <Grid>
             <form noValidate>
               <Grid container spacing={1} direction="column">
-                <Grid item>
+                <Grid>
                   <Input
                     onChange={(event) =>
                       handleFieldChange(
@@ -96,7 +96,7 @@ const Uploader = ({
                     type="file"
                   />
                 </Grid>
-                <Grid item>
+                <Grid>
                   <ConstantBasedPicker
                     module="tools"
                     label="strategyPicker"
@@ -108,7 +108,7 @@ const Uploader = ({
                     withNull={false}
                   />
                 </Grid>
-                <Grid item>
+                <Grid>
                   <FormControlLabel
                     label={formatMessage("dryRunLabel")}
                     control={
@@ -125,7 +125,7 @@ const Uploader = ({
                     }
                   />
                 </Grid>
-                <Grid item>
+                <Grid>
                   <Button
                     variant="contained"
                     color="primary"
