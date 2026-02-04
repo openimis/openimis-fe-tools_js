@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import ReportSearcher from "../components/ReportSearcher";
 
 const StyledPage = styled('div')(({ theme }) => ({
-  ...theme.page,
+  ...theme?.page ?? {},
 }));
 
 const ReportsPage = () => {

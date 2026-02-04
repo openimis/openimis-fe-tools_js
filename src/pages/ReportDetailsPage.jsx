@@ -7,11 +7,11 @@ import ReportForm from "../components/ReportForm";
 import { useOverrideReportMutation, useReportQuery } from "../hooks";
 
 const StyledPage = styled('div')(({ theme }) => ({
-  ...theme.page,
+  ...theme?.page ?? {},
 }));
 
 const StyledFab = styled('div')(({ theme }) => ({
-  ...theme.fab,
+  ...theme?.fab ?? {},
 }));
 
 const ReportDetailsPage = (props) => {

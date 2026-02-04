@@ -4,7 +4,7 @@ import { Form, PublishedComponent } from "@openimis/fe-core";
 import React from "react";
 
 const StyledGridItem = styled(Grid)(({ theme }) => ({
-  ...theme.paper.item,
+  ...theme?.paper?.item ?? {},
 }));
 
 const MainPanel = ({ edited, onEditedChanged }) => {
