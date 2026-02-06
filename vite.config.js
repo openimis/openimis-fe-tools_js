@@ -20,7 +20,6 @@ export default defineConfig({
       external: [
         /^@babel.*/,
         /^@date-io\/.*/,
-       
         /^@openimis.*/,
         'classnames',
         'clsx',
@@ -29,7 +28,14 @@ export default defineConfig({
         'moment',
         'prop-types',
         /^react.*/,
-        /^redux.*/
+        /^redux.*/,
+        '@mui/material',
+        '@mui/icons-material',
+        '@mui/x-date-pickers',
+        '@emotion/react',    
+        '@emotion/styled',
+        '@emotion/cache',
+        '@mui/styled-engine',
       ],
       output: {
         globals: {
