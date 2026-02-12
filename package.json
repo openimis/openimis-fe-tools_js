@@ -16,7 +16,7 @@
     "format": "prettier src -w",
     "prepare": "npm run build"
   },
-  "peerDependency": {
+  "peerDependencies": {
     "react-intl": "^7.1.11",
     "react": "^18.2.0",
     "@emotion/react": "^11.14.0",
