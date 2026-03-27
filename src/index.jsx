@@ -1,68 +1,36 @@
 import React from "react";
-import { FormattedMessage } from '@openimis/fe-core';
-import { Ballot, ImportExport, SaveAlt } from '@mui/icons-material';
+import { Ballot, ImportExport, SaveAlt, Settings } from "@mui/icons-material";
+import { FormattedMessage } from "@openimis/fe-core";
 import ToolsMainMenu from "./components/ToolsMainMenu";
-import RegistersPage from "./pages/RegistersPage";
-import { PolicyRenewalsPage } from "./pages/PolicyRenewalsPage";
-import { FeedbackPromptsPage } from "./pages/FeedbackPromptsPage";
-import { ExtractsPage } from "./pages/ExtractsPage";
-import { UtilitiesPage } from "./pages/UtilitiesPage";
-import { EmailSettingsPage } from "./pages/EmailSettingsPage";
-import ReportsPage from "./pages/ReportsPage";
-
 import messages_en from "./translations/en.json";
-import ReportDefinitionEditorDialog from "./components/ReportDefinitionEditorDialog";
-import ReportPicker from "./components/ReportPicker";
-import { RIGHT_REGISTERS, RIGHT_REPORTS, RIGHT_EXTRACTS } from "./constants";
-
-function enablers(rights, enablers) {
-  var e;
-  for (e of enablers) {
-    if (rights.includes(e)) return true;
-  }
-  return false;
-};
+import { RIGHT_REGISTERS, RIGHT_REPORTS, RIGHT_EXTRACTS, TOOLS_MAIN_MENU_CONTRIBUTION_KEY } from "./constants";
 
 const DEFAULT_CONFIG = {
-  "translations": [{ key: "en", messages: messages_en }],
-  "refs": [
-    { key: "tools.reports", ref: "tools/reports" },
-    { key: "tools.ReportDefinitionEditorDialog", ref: ReportDefinitionEditorDialog },
-    { key: "tools.ReportPicker", ref: ReportPicker },
-  ],
-  "core.Router": [
-    { path: "tools/registers", component: RegistersPage },
-    { path: "tools/policyRenewals", component: PolicyRenewalsPage },
-    { path: "tools/feedbackPrompts", component: FeedbackPromptsPage },
-    { path: "tools/extracts", component: ExtractsPage },
-    { path: "tools/reports", component: ReportsPage },
-    { path: "tools/utilities", component: UtilitiesPage },
-    { path: "tools/emailSettings", component: EmailSettingsPage },
-  ],
-  "core.MainMenu": [{ name: 'ToolsMainMenu', component: ToolsMainMenu }],
+  translations: [{ key: "en", messages: messages_en }],
+  "core.MainMenu": [{ name: "ToolsMainMenu", component: ToolsMainMenu }],
   "tools.MainMenu": [
     {
       text: <FormattedMessage module="tools" id="menu.registers" />,
       icon: <ImportExport />,
       route: "/tools/registers",
       id: "tools.registers",
-      filter: (rights) => enablers(rights, RIGHT_REGISTERS),
+      filter: (rights) => RIGHT_REGISTERS.some(r => rights.includes(r)),
     },
     {
       text: <FormattedMessage module="tools" id="menu.extracts" />,
       icon: <SaveAlt />,
       route: "/tools/extracts",
       id: "tools.extracts",
-      filter: (rights) => enablers(rights, RIGHT_EXTRACTS),
+      filter: (rights) => RIGHT_EXTRACTS.some(r => rights.includes(r)),
     },
     {
       text: <FormattedMessage module="tools" id="menu.reports" />,
       icon: <Ballot />,
       route: "/tools/reports",
       id: "tools.reports",
-      filter: (rights) => enablers(rights, RIGHT_REPORTS),
-    },
-  ],
+      filter: (rights) => RIGHT_REPORTS.some(r => rights.includes(r)),
+    }
+  ]
 };
 
 export const ToolsModule = (cfg) => {

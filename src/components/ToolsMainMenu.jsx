@@ -3,62 +3,17 @@ import { formatMessage, MainMenuContribution, withModulesManager } from "@openim
 import React, { Component } from "react";
 import { injectIntl } from "react-intl";
 import { connect } from "react-redux";
-import { RIGHT_REGISTERS, RIGHT_REPORTS, RIGHT_EXTRACTS } from "../constants";
+import { TOOLS_MAIN_MENU_CONTRIBUTION_KEY  } from "../constants";
 
 class ToolsMainMenu extends Component {
-  constructor(props) {
-    super(props);
-    this.isWorker = props.modulesManager.getConf("fe-core", "isWorker", false);
-  }
-
-  enablers = (enablers) => {
-    var e;
-    for (e of enablers) {
-      if (this.props.rights.includes(e)) return true;
-    }
-    return false;
-  };
-
   render() {
-    if (this.isWorker) return null;
-
-    let entries = [];
-
-    if (this.enablers(RIGHT_REGISTERS)) {
-      entries.push({
-        text: formatMessage(this.props.intl, "tools", "menu.registers"),
-        icon: <ImportExport />,
-        route: "/tools/registers",
-        id: 'tools.registers',
-      });
-    }
-    if (this.enablers(RIGHT_EXTRACTS)) {
-      entries.push({ 
-        text: formatMessage(this.props.intl, "tools", "menu.extracts"),
-        icon: <SaveAlt />,
-        route: "/tools/extracts",
-        id: 'tools.extracts', 
-      },
-      )
-    }
-    if (this.enablers(RIGHT_REPORTS)) {
-      entries.push({
-        text: formatMessage(this.props.intl, "tools", "menu.reports"),
-        icon: <Ballot />,
-        route: "/tools/reports",
-        id: 'tools.reports', 
-      });
-    }
-
-    if (!entries.length) return null;
-    
     return (
       <MainMenuContribution
         {...this.props}
         header={formatMessage(this.props.intl, "tools", "mainMenu")}
         icon={<Settings />}
-        entries={entries}
         menuId="ToolsMainMenu"
+        contributionKey={TOOLS_MAIN_MENU_CONTRIBUTION_KEY}
       />
     );
   }

@@ -25,6 +25,8 @@ export const RIGHT_POLICY_RENEWALS = 101205; // cfr.UsersBL.vb : that menu entry
 export const RIGHT_FEEDBACK_PROMPT = 111008; // cfr.UsersBL.vb : that menu entry is provided when user has ClaimReview!
 export const RIGHT_EMAILSETTING = 131304;
 
+export const TOOLS_MAIN_MENU_CONTRIBUTION_KEY = "tools.MainMenu";
+
 export const STRATEGY_INSERT = "INSERT";
 export const STRATEGY_INSERT_UPDATE = "INSERT_UPDATE";
 export const STRATEGY_UPDATE = "UPDATE";
