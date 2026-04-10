@@ -1,4 +1,9 @@
-import {Ballot, ImportExport, SaveAlt, Settings} from "@mui/icons-material";
+import { GetIconComponent } from "@openimis/fe-core";
+const Ballot = GetIconComponent("Ballot")
+const ImportExport = GetIconComponent("ImportExport")
+const SaveAlt = GetIconComponent("SaveAlt")
+const Settings = GetIconComponent("Settings")
+
 import { formatMessage, MainMenuContribution, withModulesManager } from "@openimis/fe-core";
 import React, { Component } from "react";
 import { injectIntl } from "react-intl";

@@ -2,8 +2,11 @@ import React, { useCallback, useState } from "react";
 import { useSelector } from "react-redux";
 
 import { Box, Button, Tooltip } from "@mui/material";
-import HelpOutlineIcon from "@mui/icons-material/HelpOutline";
-import EditIcon from '@mui/icons-material/Edit';
+import { GetIconComponent } from "@openimis/fe-core";
+
+const HelpOutlineIcon = GetIconComponent("HelpOutline")
+
+const EditIcon = GetIconComponent("Edit");
 
 import {
   Searcher,

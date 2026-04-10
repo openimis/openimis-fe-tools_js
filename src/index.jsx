@@ -1,5 +1,10 @@
 import React from "react";
-import { Ballot, ImportExport, SaveAlt, Settings } from "@mui/icons-material";
+import { GetIconComponent } from "@openimis/fe-core";
+const Ballot = GetIconComponent("Ballot")
+const ImportExport = GetIconComponent("ImportExport")
+const SaveAlt = GetIconComponent("SaveAlt")
+const Settings = GetIconComponent("Settings")
+
 import { FormattedMessage } from "@openimis/fe-core";
 import ToolsMainMenu from "./components/ToolsMainMenu";
 import messages_en from "./translations/en.json";

@@ -12,8 +12,14 @@ import {
 import { useSelector } from "react-redux";
 
 import { Box, Grid, Button, Input, Dialog, DialogContent, DialogTitle, DialogActions } from "@mui/material";
-import { People, Autorenew as RenewIcon, Keyboard } from "@mui/icons-material";
-import FeedbackIcon from "@mui/icons-material/SpeakerNotesOutlined";
+import { GetIconComponent } from "@openimis/fe-core";
+const People = GetIconComponent("People")
+const RenewIcon = GetIconComponent("RenewIcon")
+
+import { GetIconComponent } from "@openimis/fe-core";
+
+const FeedbackIcon = GetIconComponent("SpeakerNotesOutlined")
+
 import Block from "../components/Block";
 import { RIGHT_EXTRACTS } from "../constants";
 import {string} from "prop-types";
