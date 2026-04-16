@@ -14,15 +14,12 @@ import { useSelector } from "react-redux";
 import { Box, Grid, Button, Input, Dialog, DialogContent, DialogTitle, DialogActions } from "@mui/material";
 import { GetIconComponent } from "@openimis/fe-core";
 const People = GetIconComponent("People")
-const RenewIcon = GetIconComponent("RenewIcon")
-
-import { GetIconComponent } from "@openimis/fe-core";
-
-const FeedbackIcon = GetIconComponent("SpeakerNotesOutlined")
+const RenewIcon = GetIconComponent("Sync")
+const Keyboard = GetIconComponent("Keyboard")
+const FeedbackIcon = GetIconComponent("SpeakerNotes")
 
 import Block from "../components/Block";
 import { RIGHT_EXTRACTS } from "../constants";
-import {string} from "prop-types";
 
 const EXTRACTS_URL = `${baseApiUrl}/tools/extracts`;
 
@@ -391,4 +388,4 @@ const ExtractsPage = (props) => {
   );
 };
 
-export { ExtractsPage };
+export default ExtractsPage;
