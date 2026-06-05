@@ -1,18 +1,16 @@
-import { makeStyles } from "@material-ui/styles";
 import React from "react";
+import { styled } from "@mui/material/styles";
 import ReportSearcher from "../components/ReportSearcher";
 
-const useStyles = makeStyles((theme) => ({
-  page: theme.page,
+const StyledPage = styled('div')(({ theme }) => ({
+  ...theme?.page ?? {},
 }));
 
 const ReportsPage = () => {
-  const classes = useStyles();
-
   return (
-    <div className={classes.page}>
+    <StyledPage>
       <ReportSearcher />
-    </div>
+    </StyledPage>
   );
 };
 export default ReportsPage;

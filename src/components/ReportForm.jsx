@@ -1,24 +1,23 @@
-import { Grid } from "@material-ui/core";
-import { makeStyles } from "@material-ui/styles";
+import { Grid } from "@mui/material";
+import { styled } from "@mui/material/styles";
 import { Form, PublishedComponent } from "@openimis/fe-core";
 import React from "react";
 
-const useStyles = makeStyles((theme) => ({
-  item: theme.paper.item,
+const StyledGridItem = styled(Grid)(({ theme }) => ({
+  ...theme?.paper?.item ?? {},
 }));
 
 const MainPanel = ({ edited, onEditedChanged }) => {
-  const classes = useStyles();
   return (
     <Grid container>
-      <Grid item xs={4} className={classes.item}>
+      <StyledGridItem size={4}>
         <PublishedComponent
           pubRef="tools.ReportDefinitionEditor"
           value={edited.definition}
           defaultValue={edited.defaultReport}
           onChange={(definition) => onEditedChanged({ ...edited, definition })}
         />
-      </Grid>
+      </StyledGridItem>
     </Grid>
   );
 };

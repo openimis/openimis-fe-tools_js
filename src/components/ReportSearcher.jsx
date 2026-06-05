@@ -1,9 +1,12 @@
 import React, { useCallback, useState } from "react";
 import { useSelector } from "react-redux";
 
-import { Box, Button, Tooltip } from "@material-ui/core";
-import HelpOutlineIcon from "@material-ui/icons/HelpOutline";
-import EditIcon from '@material-ui/icons/Edit';
+import { Box, Button, Tooltip } from "@mui/material";
+import { GetIconComponent } from "@openimis/fe-core";
+
+const HelpOutlineIcon = GetIconComponent("HelpOutline")
+
+const EditIcon = GetIconComponent("Edit");
 
 import {
   Searcher,
@@ -66,7 +69,7 @@ const ReportSearcher = () => {
 
   const formatActions = (report) =>
     !report.category && (
-      <Box display="flex" justifyContent={"flex-end"} gridGap={12}>
+      <Box display="flex" justifyContent={"flex-end"} gap={12}>
         <div
           style={{
             display: "flex",
