@@ -49,7 +49,11 @@ const ReportSearcher = () => {
     const capitalizedCategory =
       report.category.charAt(0).toUpperCase() + report.category.slice(1);
     return (
-      <Box display="flex" justifyContent="flex-start">
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-start"
+        }}>
         <strong>
           <i>
             {formatMessageWithValues("ReportSearcher.moduleName", {
@@ -62,14 +66,24 @@ const ReportSearcher = () => {
   };
 
   const formatReport = (report) => (
-    <Box display="flex" justifyContent="flex-start" marginLeft="18px">
+    <Box
+      sx={{
+        display: "flex",
+        justifyContent: "flex-start",
+        marginLeft: "18px"
+      }}>
       {report.description}
     </Box>
   );
 
   const formatActions = (report) =>
     !report.category && (
-      <Box display="flex" justifyContent={"flex-end"} gap={12}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "flex-end",
+          gap: 12
+        }}>
         <div
           style={{
             display: "flex",

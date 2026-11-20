@@ -358,11 +358,18 @@ const ExtractsPage = (props) => {
 
   return (
     <>
-      <Box m={2}>
+      <Box sx={{
+        m: 2
+      }}>
         <Grid container spacing={2}>
           <Grid size={4}>
             <Block title={formatMessage("DownloadMasterData.title")}>
-              <Grid container alignItems="center" justifyContent="center">
+              <Grid
+                container
+                sx={{
+                  alignItems: "center",
+                  justifyContent: "center"
+                }}>
                 <Button variant="contained" color="primary" onClick={onExtractDownload("master_data")}>{formatMessage("DownloadMasterData.downloadBtn")}</Button>
               </Grid>
             </Block>
