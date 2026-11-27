@@ -4,13 +4,13 @@ import clsx from "clsx";
 import { Paper, Box, Typography } from "@mui/material";
 
 const StyledPaper = styled(Paper)(({ theme }) => ({
-  ...theme?.paper?.paper ?? {},
+  ...theme?.paper?.paper,
   margin: 0,
 }));
 
 const StyledHeader = styled(Box)(({ theme }) => ({
-  ...theme?.paper?.header ?? {},
-  ...theme?.paper?.title ?? {},
+  ...theme?.paper?.header,
+  ...theme?.paper?.title,
 }));
 
 const Block = (props) => {
@@ -22,8 +22,12 @@ const Block = (props) => {
           <Typography>{title}</Typography>
         </StyledHeader>
       )}
-      <Box overflow="auto">
-        <Box m="10px">{children}</Box>
+      <Box sx={{
+        overflow: "auto"
+      }}>
+        <Box sx={{
+          m: "10px"
+        }}>{children}</Box>
       </Box>
     </StyledPaper>
   );

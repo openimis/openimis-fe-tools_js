@@ -234,60 +234,80 @@ const RegistersPage = () => {
           <DialogContent>
             <ProgressOrError progress={dialogState.isLoading} />
             {dialogState.generalError && (
-              <Box my={1}>{dialogState.generalError}</Box>
+              <Box sx={{
+                my: 1
+              }}>{dialogState.generalError}</Box>
             )}
             {!dialogState.isLoading && dialogState.data && (
               <>
-                <Box my={1}>
+                <Box sx={{
+                  my: 1
+                }}>
                   <b>Status:</b>
                   {dialogState.success
                     ? formatMessage("UploadDialog.success")
                     : formatMessage("UploadDialog.failure")}
                 </Box>
                 {"sent" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.sent")}</b>
                     {dialogState.data.sent}
                   </Box>
                 )}
                 {"created" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.created")}</b>
                     {dialogState.data.created}
                   </Box>
                 )}
                 {"updated" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.updated")}</b>
                     {dialogState.data.updated}
                   </Box>
                 )}
                 {"deleted" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.deleted")}</b>
                     {dialogState.data.deleted}
                   </Box>
                 )}
                 {"skipped" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.skipped")}</b>
                     {dialogState.data.skipped}
                   </Box>
                 )}
                 {"invalid" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.invalid")}</b>
                     {dialogState.data.invalid}
                   </Box>
                 )}
                 {"failed" in dialogState.data && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.failed")}</b>
                     {dialogState.data.failed}
                   </Box>
                 )}
                 {dialogState.uploadErrors?.length > 0 && (
-                  <Box my={1}>
+                  <Box sx={{
+                    my: 1
+                  }}>
                     <b>{formatMessage("UploadDialog.errors")}</b>
                     {dialogState.uploadErrors.join(", ")}
                   </Box>
@@ -306,7 +326,9 @@ const RegistersPage = () => {
           </DialogActions>
         </Dialog>
       )}
-      <Box fullWidth m={2}>
+      <Box fullWidth sx={{
+        m: 2
+      }}>
         <Grid container spacing={2}>
           {hasRights(RIGHT_REGISTERS_DIAGNOSES) && (
             <Grid size={4}>

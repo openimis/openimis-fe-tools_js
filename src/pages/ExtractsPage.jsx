@@ -357,34 +357,39 @@ const ExtractsPage = (props) => {
 
 
   return (
-    <>
-      <Box m={2}>
-        <Grid container spacing={2}>
-          <Grid size={4}>
-            <Block title={formatMessage("DownloadMasterData.title")}>
-              <Grid container alignItems="center" justifyContent="center">
-                <Button variant="contained" color="primary" onClick={onExtractDownload("master_data")}>{formatMessage("DownloadMasterData.downloadBtn")}</Button>
-              </Grid>
-            </Block>
-          </Grid>
-          <Grid size={4}>
-            <OfficerDownloadBlock />
-          </Grid>
-          <Grid size={4}>
-            <ClaimsUploadBlock />
-          </Grid>
-          <Grid size={4}>
-            <EnrollmentsUploadBlock />
-          </Grid>
-          <Grid size={4}>
-            <FeedbacksUploadBlock />
-          </Grid>
-          <Grid size={4}>
-            <RenewalsUploadBlock />
-          </Grid>
+    <Box sx={{
+      m: 2
+    }}>
+      <Grid container spacing={2}>
+        <Grid size={4}>
+          <Block title={formatMessage("DownloadMasterData.title")}>
+            <Grid
+              container
+              sx={{
+                alignItems: "center",
+                justifyContent: "center"
+              }}>
+              <Button variant="contained" color="primary" onClick={onExtractDownload("master_data")}>{formatMessage("DownloadMasterData.downloadBtn")}</Button>
+            </Grid>
+          </Block>
         </Grid>
-      </Box>
-    </>
+        <Grid size={4}>
+          <OfficerDownloadBlock />
+        </Grid>
+        <Grid size={4}>
+          <ClaimsUploadBlock />
+        </Grid>
+        <Grid size={4}>
+          <EnrollmentsUploadBlock />
+        </Grid>
+        <Grid size={4}>
+          <FeedbacksUploadBlock />
+        </Grid>
+        <Grid size={4}>
+          <RenewalsUploadBlock />
+        </Grid>
+      </Grid>
+    </Box>
   );
 };
 
