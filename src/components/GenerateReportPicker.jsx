@@ -43,12 +43,16 @@ const GenerateReportPicker = (props) => {
         <DialogContent>
           <ErrorBoundary>
             {!name && (
-              <Box mb={2}>
+              <Box sx={{
+                mb: 2
+              }}>
                 <ReportPicker value={report} onChange={setReport} />
               </Box>
             )}
             {!props.outputFormat && (
-              <Box mb={1}>
+              <Box sx={{
+                mb: 1
+              }}>
                 <SelectInput
                   module="tools"
                   required
